@@ -50,13 +50,7 @@ public class BinaryTreeTraversalRecursion {
 
 
     public static void main(String[] args) {
-        TreeNode head = new TreeNode(1);
-        head.left = new TreeNode(2);
-        head.right = new TreeNode(3);
-        head.left.left = new TreeNode(4);
-        head.left.right = new TreeNode(5);
-        head.right.left = new TreeNode(6);
-        head.right.right = new TreeNode(7);
+        TreeNode head = buildBinaryTree();
 
         System.out.println("====preOrder=====");
         preOrder(head);
@@ -67,6 +61,17 @@ public class BinaryTreeTraversalRecursion {
         System.out.println("====postOrder=====");
         postOrder(head);
 
+    }
+
+    public static TreeNode buildBinaryTree() {
+        TreeNode head = new TreeNode(1);
+        head.left = new TreeNode(2);
+        head.right = new TreeNode(3);
+        head.left.left = new TreeNode(4);
+        head.left.right = new TreeNode(5);
+        head.right.left = new TreeNode(6);
+        head.right.right = new TreeNode(7);
+        return head;
     }
 }
 
